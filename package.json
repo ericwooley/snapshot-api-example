@@ -1,0 +1,33 @@
+{
+  "name": "snapshot-testing",
+  "version": "0.0.0",
+  "description": "Snapshot testing example for apis",
+  "main": "index.js",
+  "author": "Eric Wooley <ericwooley@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "initDB": "rm dev.sqlite3; knex migrate:latest; knex seed:run",
+    "initIntegrationDB": "export DATABASE_FILE=integration.sqlite3; rm integration.sqlite3; knex migrate:latest; knex seed:run",
+    "start": "node index.js",
+    "start:integration": "export API_PORT=3200 DATABASE_FILE=integration.sqlite3; npm run start",
+    "jest:integration": "jest __tests__/api.integration.js",
+    "test:integration": "node ./scripts/integrationTest.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "knex": "^0.13.0",
+    "request-promise": "^4.2.1",
+    "sqlite3": "^3.1.9"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4",
+    "terminate": "^2.1.0"
+  }
+}

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GET http://localhost:3200/products/ 1`] = `"[{\\"id\\":1,\\"name\\":\\"p1\\",\\"description\\":\\"product 1\\",\\"price\\":3.93},{\\"id\\":2,\\"name\\":\\"p1\\",\\"description\\":\\"product 2\\",\\"price\\":2.62},{\\"id\\":3,\\"name\\":\\"p1\\",\\"description\\":\\"product 3\\",\\"price\\":14.97}]"`;
+
+exports[`POST http://localhost:3200/products/ 1`] = `
+Object {
+  "description": "shoes",
+  "id": 4,
+  "name": "some product",
+  "price": 12.25,
+}
+`;
